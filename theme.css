@@ -1,0 +1,240 @@
+/*-- 土壤学主题颜色 --*/
+:root {
+  --soil-brown: #8B5A2B;      /* 土棕色 */
+  --soil-dark: #5C3A1B;       /* 深棕色 */
+  --soil-light: #D2B48C;      /* 浅棕色（沙土色） */
+  --soil-green: #4A7029;      /* 植被绿 */
+  --soil-sand: #F5F5DC;       /* 米色（beige） */
+  --soil-clay: #B87333;        /* 红棕色（黏土色） */
+  --soil-profile1: #8B5A2B;
+  --soil-profile2: #B87333;
+  --soil-profile3: #D2B48C;
+  --soil-profile4: #5C3A1B;
+}
+
+/*-- 全局样式 --*/
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #2C3E50;
+  line-height: 1.6;
+  background-color: #faf7f2;
+}
+
+/*-- 标题样式 --*/
+h1, h2, h3, h4, h5, h6 {
+  color: var(--soil-dark);
+  font-weight: 600;
+}
+
+h1 {
+  border-bottom: 3px solid var(--soil-brown);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+}
+
+h2 {
+  border-left: 5px solid var(--soil-green);
+  padding-left: 1rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+h3 {
+  color: var(--soil-clay);
+  font-size: 1.4rem;
+}
+
+/*-- 链接样式 --*/
+a {
+  color: var(--soil-brown);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--soil-green);
+  text-decoration: underline;
+}
+
+/*-- 导航栏样式 --*/
+.navbar {
+  background-color: var(--soil-brown) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--soil-sand) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: white !important;
+  background-color: var(--soil-dark);
+}
+
+/*-- 代码块样式 --*/
+pre, code {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+pre {
+  border-left: 4px solid var(--soil-brown);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+code {
+  color: var(--soil-clay);
+  padding: 0.2rem 0.4rem;
+}
+
+/*-- 引用块样式 --*/
+blockquote {
+  border-left: 4px solid var(--soil-green);
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+/*-- 表格样式 --*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+th {
+  background-color: var(--soil-brown);
+  color: white;
+  padding: 0.75rem;
+  font-weight: 600;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e9e9e9;
+}
+
+/*-- 卡片样式（用于突出显示）--*/
+.soil-card {
+  background-color: var(--soil-light);
+  border: 1px solid var(--soil-brown);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/*-- 土壤剖面装饰线 --*/
+.soil-profile {
+  height: 20px;
+  background: linear-gradient(to right, 
+    var(--soil-profile1) 0%, 
+    var(--soil-profile2) 30%, 
+    var(--soil-profile3) 60%, 
+    var(--soil-profile4) 100%);
+  border-radius: 5px;
+  margin: 2rem 0;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/*-- 按钮样式 --*/
+.btn-soil {
+  background-color: var(--soil-brown);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-soil:hover {
+  background-color: var(--soil-dark);
+}
+
+/*-- 页脚样式 --*/
+.footer {
+  background-color: var(--soil-dark);
+  color: var(--soil-sand);
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+/*-- 图片样式 --*/
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/*-- 列表样式 --*/
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin: 0.3rem 0;
+}
+
+/*-- 提示框样式 --*/
+.callout {
+  border-radius: 5px;
+  border-left-width: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.callout-note {
+  border-left-color: var(--soil-brown);
+  background-color: var(--soil-light);
+}
+
+.callout-tip {
+  border-left-color: var(--soil-green);
+  background-color: #e8f5e9;
+}
+
+.callout-warning {
+  border-left-color: #ff9800;
+  background-color: #fff3e0;
+}
+
+.callout-important {
+  border-left-color: #f44336;
+  background-color: #ffebee;
+}
+
+/*-- 响应式设计 --*/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .soil-card {
+    padding: 1rem;
+  }
+}

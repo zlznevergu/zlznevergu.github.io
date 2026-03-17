@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#土壤学研究方向" id="toc-土壤学研究方向" class="nav-link active" data-scroll-target="#土壤学研究方向">土壤学研究方向</a>
+  <li><a href="#研究方向" id="toc-研究方向" class="nav-link active" data-scroll-target="#研究方向">研究方向</a>
   <ul class="collapse">
   <li><a href="#土壤侵蚀机理研究" id="toc-土壤侵蚀机理研究" class="nav-link" data-scroll-target="#土壤侵蚀机理研究">1. 土壤侵蚀机理研究</a></li>
   <li><a href="#土壤数据科学" id="toc-土壤数据科学" class="nav-link" data-scroll-target="#土壤数据科学">2. 土壤数据科学</a></li>
@@ -154,21 +154,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="土壤学研究方向" class="level1">
-<h1>土壤学研究方向</h1>
+<section id="研究方向" class="level1">
+<h1>研究方向</h1>
 <section id="土壤侵蚀机理研究" class="level2 soil-card">
 <h2 class="anchored" data-anchor-id="土壤侵蚀机理研究">1. 土壤侵蚀机理研究</h2>
-<p>研究坡地梯田的土壤侵蚀过程，包括产流、入渗、植被覆盖等。</p>
+<p>研究坡地梯田的土壤侵蚀过程，包括产流、入渗、植被影响等。</p>
 <p><strong>关键词</strong>: 土壤侵蚀、产流、入渗</p>
 </section>
 <section id="土壤数据科学" class="level2 soil-card">
 <h2 class="anchored" data-anchor-id="土壤数据科学">2. 土壤数据科学</h2>
-<p>应用数据分析和机器学习方法，从土壤数据中挖掘规律。</p>
+<p>应用数据分析和机器学习方法，从大量的土壤数据中挖掘规律。</p>
 <p><strong>关键词</strong>: R语言、Python、统计建模、机器学习</p>
 </section>
 <section id="可重复性研究" class="level2 soil-card">
 <h2 class="anchored" data-anchor-id="可重复性研究">3. 可重复性研究</h2>
-<p>将Quarto等工具应用于土壤学研究，提高研究的透明度和可重复性。</p>
+<p>将Quarto等工具应用于土壤学研究，提高研究的透明度和可重复性，提高实验的说服力。</p>
 <p><strong>关键词</strong>: 文学化编程、版本控制、自动化报告</p>
 </section>
 <section id="土壤剖面示例" class="level2">
@@ -292,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/zlznevergu\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

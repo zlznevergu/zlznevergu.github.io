@@ -128,37 +128,30 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "个人信息",
+    "title": "科研经历",
     "section": "",
-    "text": "本科: 农业资源与环境 | 湖北工程学院\n硕士: 土壤学 | 华中农业大学\n\n\n\n\n\nGitHub: zlznevergu\n邮箱: 15272456624@163.com"
+    "text": "全国大学生生命科学竞赛项目负责人 - 田间试验设置3个硅肥处理(CK、Si1、Si2) - 测定水稻及土壤氮磷含量，分析关键过程活性 - 使用SPSS进行数据分析，撰写竞赛论文\n\n\n\n项目成员 - 运用Arcgis将汶川采样点导入卫星地图，整理点位数据 - 参与土壤表层样采集、整理和运送工作\n\n\n\n田间试验负责人 - 设置5个施肥处理，划分试验小区 - 负责种植、施肥、样品采集和处理 - 测定氮磷含量及相关理化性质"
   },
   {
-    "objectID": "about.html#教育背景",
-    "href": "about.html#教育背景",
-    "title": "个人信息",
+    "objectID": "about.html#科研经历",
+    "href": "about.html#科研经历",
+    "title": "科研经历",
     "section": "",
-    "text": "本科: 农业资源与环境 | 湖北工程学院\n硕士: 土壤学 | 华中农业大学"
+    "text": "全国大学生生命科学竞赛项目负责人 - 田间试验设置3个硅肥处理(CK、Si1、Si2) - 测定水稻及土壤氮磷含量，分析关键过程活性 - 使用SPSS进行数据分析，撰写竞赛论文\n\n\n\n项目成员 - 运用Arcgis将汶川采样点导入卫星地图，整理点位数据 - 参与土壤表层样采集、整理和运送工作\n\n\n\n田间试验负责人 - 设置5个施肥处理，划分试验小区 - 负责种植、施肥、样品采集和处理 - 测定氮磷含量及相关理化性质"
   },
   {
-    "objectID": "about.html#联系方式",
-    "href": "about.html#联系方式",
-    "title": "个人信息",
-    "section": "",
-    "text": "GitHub: zlznevergu\n邮箱: 15272456624@163.com"
+    "objectID": "about.html#荣誉奖项",
+    "href": "about.html#荣誉奖项",
+    "title": "科研经历",
+    "section": "荣誉奖项",
+    "text": "荣誉奖项\n\n🏆 全国大学生生命科学竞赛三等奖\n🏆 湖北省大学生生物实验技能竞赛一等奖\n🏆 第九届”互联网+“校级铜奖\n🏆 词达人杯校赛一等奖(两届)\n🏆 校级一等奖学金(2021-2024连续三届)\n🏆 三好学生标兵(2021-2024连续三届)\n📄 英语四、六级证书"
   },
   {
-    "objectID": "about.html#研究兴趣",
-    "href": "about.html#研究兴趣",
-    "title": "个人信息",
-    "section": "研究兴趣",
-    "text": "研究兴趣\n\n🧪 果园梯田的水分迁移过程\n📊 土壤侵蚀机理过程研究\n🔄 可重复性研究方法\n🌍 土地利用变化对土壤的影响"
-  },
-  {
-    "objectID": "about.html#技能雷达",
-    "href": "about.html#技能雷达",
-    "title": "个人信息",
-    "section": "技能雷达",
-    "text": "技能雷达\n\nR语言: ████████░░ 60%\nPython: ██████░░░░ 60%\nQuarto: ███████░░░ 70%\n数据分析: ████████░░ 70%\n土壤学: ████████░░ 80%"
+    "objectID": "about.html#技能特长",
+    "href": "about.html#技能特长",
+    "title": "科研经历",
+    "section": "技能特长",
+    "text": "技能特长\n\n专业软件: Arcgis、Origin、SPSS、Arcmap\n实验技能: 土壤农化分析、氮磷测定、田间试验设计\n个人品质: 乐观开朗、抗压能力强、善于沟通、快速适应"
   },
   {
     "objectID": "index.html",

@@ -1,5 +1,68 @@
 [
   {
+    "objectID": "zlznevergu.github.io/research.html",
+    "href": "zlznevergu.github.io/research.html",
+    "title": "🌱 研究方向",
+    "section": "",
+    "text": "研究坡地梯田的土壤侵蚀过程，包括产流、入渗、植被影响等。\n关键词: 土壤侵蚀、产流、入渗\n\n\n\n应用数据分析和机器学习方法，从大量的土壤数据中挖掘规律。\n关键词: R语言、Python、统计建模、机器学习\n\n\n\n将Quarto等工具应用于土壤学研究，提高研究的透明度和可重复性，提高实验的说服力。\n关键词: 文学化编程、版本控制、自动化报告\n\n\n\n\n\n\n\n\n\n土层深度\n颜色描述\n有机质(%)\n质地\n\n\n\n\n0-10cm\n暗棕色\n3.5\n壤土\n\n\n10-20cm\n棕色\n2.8\n黏壤土\n\n\n20-30cm\n红棕色\n1.9\n黏土\n\n\n30-50cm\n黄棕色\n1.2\n砂质黏壤土\n\n\n\n表1: 研究区土壤剖面特征"
+  },
+  {
+    "objectID": "zlznevergu.github.io/research.html#土壤侵蚀机理研究",
+    "href": "zlznevergu.github.io/research.html#土壤侵蚀机理研究",
+    "title": "🌱 研究方向",
+    "section": "",
+    "text": "研究坡地梯田的土壤侵蚀过程，包括产流、入渗、植被影响等。\n关键词: 土壤侵蚀、产流、入渗"
+  },
+  {
+    "objectID": "zlznevergu.github.io/research.html#土壤数据科学",
+    "href": "zlznevergu.github.io/research.html#土壤数据科学",
+    "title": "🌱 研究方向",
+    "section": "",
+    "text": "应用数据分析和机器学习方法，从大量的土壤数据中挖掘规律。\n关键词: R语言、Python、统计建模、机器学习"
+  },
+  {
+    "objectID": "zlznevergu.github.io/research.html#可重复性研究",
+    "href": "zlznevergu.github.io/research.html#可重复性研究",
+    "title": "🌱 研究方向",
+    "section": "",
+    "text": "将Quarto等工具应用于土壤学研究，提高研究的透明度和可重复性，提高实验的说服力。\n关键词: 文学化编程、版本控制、自动化报告"
+  },
+  {
+    "objectID": "zlznevergu.github.io/research.html#土壤剖面示例",
+    "href": "zlznevergu.github.io/research.html#土壤剖面示例",
+    "title": "🌱 研究方向",
+    "section": "",
+    "text": "土层深度\n颜色描述\n有机质(%)\n质地\n\n\n\n\n0-10cm\n暗棕色\n3.5\n壤土\n\n\n10-20cm\n棕色\n2.8\n黏壤土\n\n\n20-30cm\n红棕色\n1.9\n黏土\n\n\n30-50cm\n黄棕色\n1.2\n砂质黏壤土\n\n\n\n表1: 研究区土壤剖面特征"
+  },
+  {
+    "objectID": "zlznevergu.github.io/analysis.html",
+    "href": "zlznevergu.github.io/analysis.html",
+    "title": "📊 土壤数据分析",
+    "section": "",
+    "text": "library(ggplot2)\nlibrary(dplyr)\n\n# 创建土壤数据\nset.seed(123)\nsoil_data &lt;- data.frame(\n  depth = rep(c(\"0-10cm\", \"10-20cm\", \"20-30cm\", \"30-50cm\"), each=15),\n  organic_matter = c(\n    rnorm(15, 3.5, 0.5),\n    rnorm(15, 2.7, 0.4),\n    rnorm(15, 1.9, 0.3),\n    rnorm(15, 1.1, 0.2)\n  ),\n  ph = c(\n    rnorm(15, 6.5, 0.3),\n    rnorm(15, 6.2, 0.3),\n    rnorm(15, 5.8, 0.4),\n    rnorm(15, 5.4, 0.4)\n  )\n)\n\n# 土壤颜色主题\nsoil_colors &lt;- c(\"#8B5A2B\", \"#B87333\", \"#D2B48C\", \"#5C3A1B\")\n\n# 绘制箱线图\nggplot(soil_data, aes(x=depth, y=organic_matter, fill=depth)) +\n  geom_boxplot(alpha=0.7) +\n  scale_fill_manual(values=soil_colors) +\n  theme_minimal() +\n  labs(title=\"不同土层有机质含量分布\",\n       x=\"土层深度\",\n       y=\"有机质 (%)\") +\n  theme(legend.position=\"none\",\n        plot.title = element_text(color=\"#5C3A1B\", size=16, face=\"bold\"))\n\n\n\n\n不同土壤深度有机质含量\n\n\n\n\n\n\n\n\nsummary(soil_data)\n\n    depth           organic_matter         ph       \n Length:60          Min.   :0.7902   Min.   :4.733  \n Class :character   1st Qu.:1.4911   1st Qu.:5.542  \n Mode  :character   Median :2.2066   Median :6.108  \n                    Mean   :2.3196   Mean   :5.960  \n                    3rd Qu.:3.1678   3rd Qu.:6.350  \n                    Max.   :4.3575   Max.   :7.115  \n\n\n\n\n\n\nlibrary(corrplot)\n\nWarning: package 'corrplot' was built under R version 4.5.2\n\n\ncorrplot 0.95 loaded\n\nsoil_cor &lt;- cor(soil_data[, c(\"organic_matter\", \"ph\")])\ncorrplot(soil_cor, method=\"color\", type=\"upper\", \n         col=colorRampPalette(c(\"#5C3A1B\", \"white\", \"#8B5A2B\"))(200),\n         title=\"土壤属性相关性\",\n         mar=c(0,0,2,0))\n\n\n\n\n土壤属性相关性热图"
+  },
+  {
+    "objectID": "zlznevergu.github.io/analysis.html#r语言分析",
+    "href": "zlznevergu.github.io/analysis.html#r语言分析",
+    "title": "📊 土壤数据分析",
+    "section": "",
+    "text": "library(ggplot2)\nlibrary(dplyr)\n\n# 创建土壤数据\nset.seed(123)\nsoil_data &lt;- data.frame(\n  depth = rep(c(\"0-10cm\", \"10-20cm\", \"20-30cm\", \"30-50cm\"), each=15),\n  organic_matter = c(\n    rnorm(15, 3.5, 0.5),\n    rnorm(15, 2.7, 0.4),\n    rnorm(15, 1.9, 0.3),\n    rnorm(15, 1.1, 0.2)\n  ),\n  ph = c(\n    rnorm(15, 6.5, 0.3),\n    rnorm(15, 6.2, 0.3),\n    rnorm(15, 5.8, 0.4),\n    rnorm(15, 5.4, 0.4)\n  )\n)\n\n# 土壤颜色主题\nsoil_colors &lt;- c(\"#8B5A2B\", \"#B87333\", \"#D2B48C\", \"#5C3A1B\")\n\n# 绘制箱线图\nggplot(soil_data, aes(x=depth, y=organic_matter, fill=depth)) +\n  geom_boxplot(alpha=0.7) +\n  scale_fill_manual(values=soil_colors) +\n  theme_minimal() +\n  labs(title=\"不同土层有机质含量分布\",\n       x=\"土层深度\",\n       y=\"有机质 (%)\") +\n  theme(legend.position=\"none\",\n        plot.title = element_text(color=\"#5C3A1B\", size=16, face=\"bold\"))\n\n\n\n\n不同土壤深度有机质含量"
+  },
+  {
+    "objectID": "zlznevergu.github.io/analysis.html#统计摘要",
+    "href": "zlznevergu.github.io/analysis.html#统计摘要",
+    "title": "📊 土壤数据分析",
+    "section": "",
+    "text": "summary(soil_data)\n\n    depth           organic_matter         ph       \n Length:60          Min.   :0.7902   Min.   :4.733  \n Class :character   1st Qu.:1.4911   1st Qu.:5.542  \n Mode  :character   Median :2.2066   Median :6.108  \n                    Mean   :2.3196   Mean   :5.960  \n                    3rd Qu.:3.1678   3rd Qu.:6.350  \n                    Max.   :4.3575   Max.   :7.115"
+  },
+  {
+    "objectID": "zlznevergu.github.io/analysis.html#相关性分析",
+    "href": "zlznevergu.github.io/analysis.html#相关性分析",
+    "title": "📊 土壤数据分析",
+    "section": "",
+    "text": "library(corrplot)\n\nWarning: package 'corrplot' was built under R version 4.5.2\n\n\ncorrplot 0.95 loaded\n\nsoil_cor &lt;- cor(soil_data[, c(\"organic_matter\", \"ph\")])\ncorrplot(soil_cor, method=\"color\", type=\"upper\", \n         col=colorRampPalette(c(\"#5C3A1B\", \"white\", \"#8B5A2B\"))(200),\n         title=\"土壤属性相关性\",\n         mar=c(0,0,2,0))\n\n\n\n\n土壤属性相关性热图"
+  },
+  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "🌱 研究方向",
@@ -102,14 +165,14 @@
     "href": "index.html",
     "title": "曾令振的个人主页",
     "section": "",
-    "text": "Note基本信息\n\n\n\n\n学号: 2025303110063\n专业: 土壤学\n学校: 华中农业大学\n\n\n\n\n\n\n\n\n\n\n本科: 农业资源与环境 | 湖北工程学院\n硕士: 土壤学 | 华中农业大学\n\n\n\n\n\nGitHub: zlznevergu\n邮箱: 15272456624@163.com\n\n\n\n\n\n\n🧪 果园梯田的水分迁移过程\n📊 土壤侵蚀机理过程研究\n🔄 可重复性研究方法\n🌍 土地利用变化对土壤的影响\n\n\n\n\n\nR语言: ████████░░ 60%\nPython: ██████░░░░ 60%\nQuarto: ███████░░░ 70%\n数据分析: ████████░░ 70%\n土壤学: ████████░░ 80%"
+    "text": "Note基本信息\n\n\n\n\n学号: 2025303110063\n专业: 土壤学\n学校: 华中农业大学\n\n\n\n👤 关于我 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n\n\n\n\n\n\n\n\n\n\n\n66e9bee959f70f1acb97315c8c4bafc4b71993f6 ## 教育背景 - 本科: 农业资源与环境 | 湖北工程学院 - 硕士: 土壤学 | 华中农业大学\n\n\n\n\n\n\n\n\n\n\nGitHub: zlznevergu\n邮箱: 15272456624@163.com\n\n\n\n\n\n\n\n🧪 果园梯田的水分迁移过程\n📊 土壤侵蚀机理过程研究\n🔄 可重复性研究方法\n🌍 土地利用变化对土壤的影响\n\n\n\n\n\nR语言: ████████░░ 60%\nPython: ██████░░░░ 60%\nQuarto: ███████░░░ 70%\n数据分析: ████████░░ 70%\n土壤学: ████████░░ 80%"
   },
   {
-    "objectID": "index.html#教育背景",
-    "href": "index.html#教育背景",
+    "objectID": "index.html#section",
+    "href": "index.html#section",
     "title": "曾令振的个人主页",
     "section": "",
-    "text": "本科: 农业资源与环境 | 湖北工程学院\n硕士: 土壤学 | 华中农业大学"
+    "text": "66e9bee959f70f1acb97315c8c4bafc4b71993f6 ## 教育背景 - 本科: 农业资源与环境 | 湖北工程学院 - 硕士: 土壤学 | 华中农业大学\n\n\n\n\n\n\n\n\n\n\nGitHub: zlznevergu\n邮箱: 15272456624@163.com"
   },
   {
     "objectID": "index.html#联系方式",
@@ -128,6 +191,69 @@
   {
     "objectID": "index.html#技能雷达",
     "href": "index.html#技能雷达",
+    "title": "曾令振的个人主页",
+    "section": "",
+    "text": "R语言: ████████░░ 60%\nPython: ██████░░░░ 60%\nQuarto: ███████░░░ 70%\n数据分析: ████████░░ 70%\n土壤学: ████████░░ 80%"
+  },
+  {
+    "objectID": "zlznevergu.github.io/about.html",
+    "href": "zlznevergu.github.io/about.html",
+    "title": "科研经历",
+    "section": "",
+    "text": "全国大学生生命科学竞赛项目负责人 - 田间试验设置3个硅肥处理(CK、Si1、Si2) - 测定水稻及土壤氮磷含量，分析关键过程活性 - 使用SPSS进行数据分析，撰写竞赛论文\n\n\n\n项目成员 - 运用Arcgis将汶川采样点导入卫星地图，整理点位数据 - 参与土壤表层样采集、整理和运送工作\n\n\n\n田间试验负责人 - 设置5个施肥处理，划分试验小区 - 负责种植、施肥、样品采集和处理 - 测定氮磷含量及相关理化性质"
+  },
+  {
+    "objectID": "zlznevergu.github.io/about.html#科研经历",
+    "href": "zlznevergu.github.io/about.html#科研经历",
+    "title": "科研经历",
+    "section": "",
+    "text": "全国大学生生命科学竞赛项目负责人 - 田间试验设置3个硅肥处理(CK、Si1、Si2) - 测定水稻及土壤氮磷含量，分析关键过程活性 - 使用SPSS进行数据分析，撰写竞赛论文\n\n\n\n项目成员 - 运用Arcgis将汶川采样点导入卫星地图，整理点位数据 - 参与土壤表层样采集、整理和运送工作\n\n\n\n田间试验负责人 - 设置5个施肥处理，划分试验小区 - 负责种植、施肥、样品采集和处理 - 测定氮磷含量及相关理化性质"
+  },
+  {
+    "objectID": "zlznevergu.github.io/about.html#荣誉奖项",
+    "href": "zlznevergu.github.io/about.html#荣誉奖项",
+    "title": "科研经历",
+    "section": "荣誉奖项",
+    "text": "荣誉奖项\n\n🏆 全国大学生生命科学竞赛三等奖\n🏆 湖北省大学生生物实验技能竞赛一等奖\n🏆 第九届”互联网+“校级铜奖\n🏆 词达人杯校赛一等奖(两届)\n🏆 校级一等奖学金(2021-2024连续三届)\n🏆 三好学生标兵(2021-2024连续三届)\n📄 英语四、六级证书"
+  },
+  {
+    "objectID": "zlznevergu.github.io/about.html#技能特长",
+    "href": "zlznevergu.github.io/about.html#技能特长",
+    "title": "科研经历",
+    "section": "技能特长",
+    "text": "技能特长\n\n专业软件: Arcgis、Origin、SPSS、Arcmap\n实验技能: 土壤农化分析、氮磷测定、田间试验设计\n个人品质: 乐观开朗、抗压能力强、善于沟通、快速适应"
+  },
+  {
+    "objectID": "zlznevergu.github.io/index.html",
+    "href": "zlznevergu.github.io/index.html",
+    "title": "曾令振的个人主页",
+    "section": "",
+    "text": "Note基本信息\n\n\n\n\n学号: 2025303110063\n专业: 土壤学\n学校: 华中农业大学\n\n\n\n\n\n\n\n\n\n\n本科: 农业资源与环境 | 湖北工程学院\n硕士: 土壤学 | 华中农业大学\n\n\n\n\n\nGitHub: zlznevergu\n邮箱: 15272456624@163.com\n\n\n\n\n\n\n🧪 果园梯田的水分迁移过程\n📊 土壤侵蚀机理过程研究\n🔄 可重复性研究方法\n🌍 土地利用变化对土壤的影响\n\n\n\n\n\nR语言: ████████░░ 60%\nPython: ██████░░░░ 60%\nQuarto: ███████░░░ 70%\n数据分析: ████████░░ 70%\n土壤学: ████████░░ 80%"
+  },
+  {
+    "objectID": "zlznevergu.github.io/index.html#教育背景",
+    "href": "zlznevergu.github.io/index.html#教育背景",
+    "title": "曾令振的个人主页",
+    "section": "",
+    "text": "本科: 农业资源与环境 | 湖北工程学院\n硕士: 土壤学 | 华中农业大学"
+  },
+  {
+    "objectID": "zlznevergu.github.io/index.html#联系方式",
+    "href": "zlznevergu.github.io/index.html#联系方式",
+    "title": "曾令振的个人主页",
+    "section": "",
+    "text": "GitHub: zlznevergu\n邮箱: 15272456624@163.com"
+  },
+  {
+    "objectID": "zlznevergu.github.io/index.html#研究方向",
+    "href": "zlznevergu.github.io/index.html#研究方向",
+    "title": "曾令振的个人主页",
+    "section": "",
+    "text": "🧪 果园梯田的水分迁移过程\n📊 土壤侵蚀机理过程研究\n🔄 可重复性研究方法\n🌍 土地利用变化对土壤的影响"
+  },
+  {
+    "objectID": "zlznevergu.github.io/index.html#技能雷达",
+    "href": "zlznevergu.github.io/index.html#技能雷达",
     "title": "曾令振的个人主页",
     "section": "",
     "text": "R语言: ████████░░ 60%\nPython: ██████░░░░ 60%\nQuarto: ███████░░░ 70%\n数据分析: ████████░░ 70%\n土壤学: ████████░░ 80%"

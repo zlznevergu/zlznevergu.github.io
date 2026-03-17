@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
-<span class="menu-text">个人信息</span></a>
+<span class="menu-text">科研经历</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./research.html"> 
@@ -122,12 +122,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#欢迎来到我的主页" id="toc-欢迎来到我的主页" class="nav-link active" data-scroll-target="#欢迎来到我的主页">欢迎来到我的主页 👋</a>
-  <ul class="collapse">
-  <li><a href="#关于我" id="toc-关于我" class="nav-link" data-scroll-target="#关于我">👤 关于我</a></li>
-  <li><a href="#研究兴趣" id="toc-研究兴趣" class="nav-link" data-scroll-target="#研究兴趣">研究兴趣</a></li>
-  <li><a href="#技能雷达" id="toc-技能雷达" class="nav-link" data-scroll-target="#技能雷达">技能雷达</a></li>
-  </ul></li>
+  <li><a href="#欢迎来到我的主页" id="toc-欢迎来到我的主页" class="nav-link active" data-scroll-target="#欢迎来到我的主页">欢迎来到我的主页 👋</a></li>
   </ul>
 </nav>
     </div>
@@ -172,17 +167,26 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
-<section id="关于我" class="level2">
-<h2 class="anchored" data-anchor-id="关于我">👤 关于我</h2>
-</section>
+👤 关于我 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 <div class="soil-card">
-<section id="教育背景" class="level2">
-<h2 class="anchored" data-anchor-id="教育背景">教育背景</h2>
-<ul>
-<li><strong>本科</strong>: 农业资源与环境 | 湖北工程学院</li>
-<li><strong>硕士</strong>: 土壤学 | 华中农业大学</li>
-</ul>
-</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">=======</h2>
+<div class="soil-card">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>66e9bee959f70f1acb97315c8c4bafc4b71993f6 ## 教育背景 - <strong>本科</strong>: 农业资源与环境 | 湖北工程学院 - <strong>硕士</strong>: 土壤学 | 华中农业大学</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <section id="联系方式" class="level2">
 <h2 class="anchored" data-anchor-id="联系方式">联系方式</h2>
 <ul>
@@ -191,6 +195,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </div>
+</section>
 <section id="研究兴趣" class="level2">
 <h2 class="anchored" data-anchor-id="研究兴趣">研究兴趣</h2>
 <ul>
@@ -212,6 +217,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 </section>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -288,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/zlznevergu\.github\.io\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

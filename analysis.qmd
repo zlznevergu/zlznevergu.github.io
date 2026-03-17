@@ -1,0 +1,70 @@
+---
+title: "📊 土壤数据分析"
+---
+
+# 土壤数据可视化示例
+
+## R语言分析
+
+```{r}
+#| echo: true
+#| warning: false
+#| fig-cap: "不同土壤深度有机质含量"
+#| fig-width: 8
+#| fig-height: 5
+
+library(ggplot2)
+library(dplyr)
+
+# 创建土壤数据
+set.seed(123)
+soil_data <- data.frame(
+  depth = rep(c("0-10cm", "10-20cm", "20-30cm", "30-50cm"), each=15),
+  organic_matter = c(
+    rnorm(15, 3.5, 0.5),
+    rnorm(15, 2.7, 0.4),
+    rnorm(15, 1.9, 0.3),
+    rnorm(15, 1.1, 0.2)
+  ),
+  ph = c(
+    rnorm(15, 6.5, 0.3),
+    rnorm(15, 6.2, 0.3),
+    rnorm(15, 5.8, 0.4),
+    rnorm(15, 5.4, 0.4)
+  )
+)
+
+# 土壤颜色主题
+soil_colors <- c("#8B5A2B", "#B87333", "#D2B48C", "#5C3A1B")
+
+# 绘制箱线图
+ggplot(soil_data, aes(x=depth, y=organic_matter, fill=depth)) +
+  geom_boxplot(alpha=0.7) +
+  scale_fill_manual(values=soil_colors) +
+  theme_minimal() +
+  labs(title="不同土层有机质含量分布",
+       x="土层深度",
+       y="有机质 (%)") +
+  theme(legend.position="none",
+        plot.title = element_text(color="#5C3A1B", size=16, face="bold"))
+```
+
+## 统计摘要
+
+```{r}
+summary(soil_data)
+```
+
+## 相关性分析
+
+```{r}
+#| fig-cap: "土壤属性相关性热图"
+
+library(corrplot)
+
+soil_cor <- cor(soil_data[, c("organic_matter", "ph")])
+corrplot(soil_cor, method="color", type="upper", 
+         col=colorRampPalette(c("#5C3A1B", "white", "#8B5A2B"))(200),
+         title="土壤属性相关性",
+         mar=c(0,0,2,0))
+```
